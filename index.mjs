@@ -112,7 +112,7 @@ function generateLicense(license){
         return `No license`;
     }
     
-    
+}
 
 
-fs.writeFile("README.md", READmeText)}
+fs.writeFile("README.md", READmeText)
