@@ -85,15 +85,15 @@ function generateLicense(license){
 
     if(license === 'MIT'){
     
-    return `[![license](https");`
+    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
     }
     if(license === 'Apache 2.0'){
 
-        return ``
+        return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
     }
     if(license === 'Boost'){
 
-        return ``
+        return `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`
     }
     else{
 
