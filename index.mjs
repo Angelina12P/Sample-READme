@@ -1,33 +1,35 @@
 import inquirer from "inquirer";
 import fs from "fs/promises";
 
-let {firstName, lastName} = await inquirer
-inquirer.prompt((
+
+
+let response = await inquirer 
+.prompt([
     {
-            type:'input',
-            name:'name',
-            message:'Project Title: '
+        type:'input',
+        name:'projectTitle',
+        message:'Project Title: ',
     },
     {
-            type:'input',
-            name:'description',
-            message:'Project Description: '
+        type:'input',
+        name:'description',
+        message:'Project Description: '
     },
     {
-            type:'input',
-            name:'installation',
-            message:'Project Installation Requirements: '
+        type:'input',
+        name:'installation',
+        message:'Project Installation Requirements: '
     },
     {
-            type:'input',
-            name:'usage',
-            message:'Project Usage Information: '
+        type:'input',
+        name:'usage',
+        message:'Project Usage Information: '
     },
     {
         type:'list',
         name: 'license',
         message: 'Select Project License: ',
-        choices: [ 'MIT', 'Apache 2.0', 'Boost', 'None'],
+        choices: ['MIT', 'Apache 2.0', 'Boost', 'None'],
         filter(val){
             return val.toLowerCase();
         },
@@ -44,61 +46,73 @@ inquirer.prompt((
       },
       {
         type: 'input',
-        name: 'Questions/Contact',
+        name: 'contactQs',
         message: 'Project Questions To Be Sent To (contact info): '
-      },
-  
-))
+    },
+
+])
 
 
-console.log(firstName, lastName);
 
-let READmeText = `#Project Title
-$(ProjectTitle)
+
+let READmeText = 
+
+`#Project Title
+${response.projectTitle}
 
 ##Description
-$(ProjectTitle)
+${response.description}
+
+##Table of Contents
+- ##installation
+- ##usage
+- ##license
+- ##contributing
+- ##tests
+- ##questions
 
 ##Installation
-$(Installation)
+${response.installation}
 
 ##Usage
-$(Usage)
+${response.usage}
 
 ##License
-$(License)
+${response.license}
 
-${generateLicense(license)}
+${generateLicense(response.license)}
 
 ##Contributing
-$(Contributing)
+${response.contributing}
 
 ##Test
-$(ProjectTitle)
+${response.tests}
 
 ##Questions
-$(Questions)`
+${response.contactQs}` ;
 
-fs.writeFile("README.md", READmeText)
+
 
 function generateLicense(license){
-
-    if(license === 'MIT'){
     
-    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+    if(license === 'MIT'){
+        
+        return `[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
     }
     if(license === 'Apache 2.0'){
-
+        
         return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
     }
     if(license === 'Boost'){
-
+        
         return `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`
     }
     else{
-
+        
         return `No license`;
     }
+    
+    
 
 
-}
+fs.writeFile("README.md", READmeText)}
