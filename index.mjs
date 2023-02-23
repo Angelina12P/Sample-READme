@@ -57,38 +57,38 @@ let response = await inquirer
 
 let READmeText = 
 
-`#Project Title
+`# **Project Title**  
 ${response.projectTitle}
 
-##Description
+## **Description**  
 ${response.description}
 
-##Table of Contents
-- ##installation
-- ##usage
-- ##license
-- ##contributing
-- ##tests
-- ##questions
+## **Table of Contents**  
+- [Installation](##installation)
+- [Usage](##usage)
+- [License](##license)
+- [Contributing](##contributing)
+- [Tests](##tests)
+- [Questions](##questions)
 
-##Installation
+## **Installation**  
 ${response.installation}
 
-##Usage
+## **Usage**  
 ${response.usage}
 
-##License
+## **License**  
 ${response.license}
 
 ${generateLicense(response.license)}
 
-##Contributing
+## **Contributing**  
 ${response.contributing}
 
-##Test
+## **Test**  
 ${response.tests}
 
-##Questions
+## **Questions**  
 ${response.contactQs}` ;
 
 
