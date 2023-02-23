@@ -1,33 +1,33 @@
-#Project Title
+# **Project Title**  
 Sample Readme
 
-##Description
+## **Description**  
 A readme file generated with a command line application
 
-##Table of Contents
-- ##installation
-- ##usage
-- ##license
-- ##contributing
-- ##tests
-- ##questions
+## **Table of Contents**  
+- [Installation](##installation)
+- [Usage](##usage)
+- [License](##license)
+- [Contributing](##contributing)
+- [Tests](##tests)
+- [Questions](##questions)
 
-##Installation
+## **Installation**  
 none
 
-##Usage
-openin browser, read.
+## **Usage**  
+Browser accessible
 
-##License
+## **License**  
 mit
 
 No license
 
-##Contributing
-any
+## **Contributing**  
+Any
 
-##Test
-none
+## **Test**  
+None
 
-##Questions
-www.dont@please.com
+## **Questions**  
+dont@please.com
