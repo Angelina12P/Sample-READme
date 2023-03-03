@@ -1,8 +1,8 @@
 # **Project Title**  
-Sample Readme
+
 
 ## **Description**  
-A readme file generated with a command line application
+
 
 ## **Table of Contents**  
 - [Installation](##installation)
@@ -13,21 +13,18 @@ A readme file generated with a command line application
 - [Questions](##questions)
 
 ## **Installation**  
-none
+
 
 ## **Usage**  
-Browser accessible
 
-## **License**  
-mit
 
-No license
+## **License** 
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## **Contributing**  
-Any
+
 
 ## **Test**  
-None
+
 
 ## **Questions**  
-dont@please.com

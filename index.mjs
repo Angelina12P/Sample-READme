@@ -77,9 +77,7 @@ ${response.installation}
 ## **Usage**  
 ${response.usage}
 
-## **License**  
-${response.license}
-
+## **License** 
 ${generateLicense(response.license)}
 
 ## **Contributing**  
@@ -94,23 +92,24 @@ ${response.contactQs}` ;
 
 
 function generateLicense(license){
+    console.log(license)
     
-    if(license === 'MIT'){
+    if(license === 'mit'){
         
         return `[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
     }
-    if(license === 'Apache 2.0'){
+    if(license === 'apache 2.0'){
         
         return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
     }
-    if(license === 'Boost'){
+    if(license === 'boost'){
         
         return `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`
     }
-    else{
-        
-        return `No license`;
-    }
+    else if (license === "None") {
+        return `no license`;
+      }
+    
     
 }
 
